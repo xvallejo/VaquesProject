@@ -4,10 +4,10 @@ namespace Vaques.Model
 {
     public class Raca
     {
-        public const string Desconeguda = "Desconeguda";
+        public static string Desconeguda = "Desconeguda";
         public Raca(string nom, double litres)
         {
-            if (string.IsNullOrEmpty(nom))
+            if (string.IsNullOrWhiteSpace(nom))
             {
                 nom = Desconeguda;
             }

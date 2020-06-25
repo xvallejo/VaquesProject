@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vaques", "Vaques\Vaques.csproj", "{B6D756A1-9869-4868-9474-9B979CEADAA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaquesTest", "VaquesTest\VaquesTest.csproj", "{E151A843-4029-4E30-B74D-F259FE6EF460}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaquesTest", "Vaques.Tests\Vaques.Tests.csproj", "{E151A843-4029-4E30-B74D-F259FE6EF460}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
