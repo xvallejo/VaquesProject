@@ -1,10 +1,12 @@
-namespace Vaca.Model
+namespace Vaques.Model
 {
     public class Vaca
     {
         public Vaca(string nom, double pes, Raca raca)
         {
-
+            Nom = nom;
+            Pes = pes;
+            Raca = raca;
         }
 
         public string Nom { get; set; }

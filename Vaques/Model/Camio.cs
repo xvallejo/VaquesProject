@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Vaca.Model
+namespace Vaques.Model
 {
     public class Camio
     {
