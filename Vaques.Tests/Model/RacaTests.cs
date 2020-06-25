@@ -8,8 +8,14 @@ namespace Vaques.Model
         [Fact]
         public void TestQueSiNoHiHaNomLiPosemDesconeguda()
         {
+            // ARRANGE
             var sut = new Raca(null, 23);
-            Assert.Equal(Raca.Desconeguda, sut.Nom);
+
+            // ACT
+            var resultat = sut.Nom;
+
+            // ASSERT
+            Assert.Equal(Raca.Desconeguda, resultat);
 
         }
 
@@ -19,8 +25,14 @@ namespace Vaques.Model
         [InlineData("XXXXXXXXXX")]
         public void testQueElNomEsElQueLiHemDonat(string nom)
         {
+            // ARRANGE
             var sut = new Raca(nom, 5);
-            Assert.Equal(nom, sut.Nom);
+
+            // ACT
+            var resultat = sut.Nom;
+
+            // ASSERT
+            Assert.Equal(nom, resultat);
         }
 
         [Theory]
@@ -30,8 +42,14 @@ namespace Vaques.Model
         [InlineData("\n")]
         public void testQueSiElNomEsBuitRetornaRaçaDesconeguda(string nom)
         {
+            // ARRANGE
             var sut = new Raca(nom, 10);
-            Assert.Equal(Raca.Desconeguda, sut.Nom);
+
+            // ACT
+            var resultat = sut.Nom;
+
+            // ASSERT
+            Assert.Equal(Raca.Desconeguda, resultat);
         }
 
 

@@ -16,7 +16,7 @@ namespace Vaques.Model
         }
 
         public string Nom { get; }
-        public double LitresPerKg { get; }
+        public virtual double LitresPerKg { get; }
 
         public override string ToString()
         {

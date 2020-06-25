@@ -14,9 +14,9 @@ namespace Vaques.Model
 
         public Raca Raca { get; }
 
-        public double GetLitres() => Pes * Raca.LitresPerKg;
+        public virtual double GetLitres() => Pes * Raca.LitresPerKg;
 
-        public string crida()
+        public virtual string crida()
         {
             var crit = "";
             for (int i = 0; i < Pes; i += 100)
