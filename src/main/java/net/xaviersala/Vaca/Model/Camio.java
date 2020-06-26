@@ -9,12 +9,14 @@ public class Camio {
 	private double PesMaxim;
     private double PesActual;
     private List<Vaca> Vaques;
+	private int MaxVaques;
     private double Litres;
 	
-    public Camio(double pesMax)
+    public Camio(double pesMax, int nvaques)
     {
         PesMaxim = pesMax;
         PesActual = 0;
+		MaxVaques = nvaques;
         Vaques = new ArrayList<Vaca>();
     }
     
@@ -36,7 +38,10 @@ public class Camio {
 	public double getLitres() {
 		return Litres;
 	}
-
+	
+	public int getMaxVaques(){
+		return MaxVaques;
+	}
 
 	public double GetLitres() { 
     	return Vaques.stream().mapToDouble(i -> i.GetLitres()).sum();
@@ -44,7 +49,7 @@ public class Camio {
 
     public boolean EntraVaca(Vaca vaca)
     {
-        if (PesActual + vaca.getPes() > PesMaxim)
+        if (PesActual + vaca.getPes() > PesMaxim && Vaques.size() < MaxVaques)
         {
             return false;
         }
@@ -57,13 +62,25 @@ public class Camio {
     public boolean TreuVaca(Vaca vaca)
     {
         boolean resultat = Vaques.remove(vaca);
-        if (resultat) { PesActual -= vaca.getPes(); }
+        if (resultat) { 
+			PesActual -= vaca.getPes(); 
+		}
         return resultat;
+    }
+	
+	public boolean ComprovaVaca(Vaca vaca)
+    {
+        if (PesActual + vaca.getPes() > PesMaxim && Vaques.size() < MaxVaques)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     @Override
     public String toString() {
-    	return "Camio max: " + PesMaxim + "(" + PesActual + " - vaques: " + Vaques.size();
+    	return "Camio max: " + PesMaxim + "(" + PesActual + " - vaques: " + Vaques.size() + ")";
     }
 
 }
