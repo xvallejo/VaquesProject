@@ -16,7 +16,7 @@ public class Raca {
 	
     public Raca(String nom, double litres)
     {
-    	if (nom == null || nom.isBlank() || nom.isEmpty()) {
+    	if (nom == null || nom.trim().length() == 0 || nom.isEmpty()) { //JRE 1.8 fix
     		nom = desconeguda;
     	}
         Nom = nom;
